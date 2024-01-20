@@ -1,0 +1,113 @@
+/* login.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    height: 100vh; /* Set full viewport height */
+  }
+  
+  .container {
+    background-color: white;
+    width: 480px;
+    height: 550px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Align children in a column */
+    align-items: center; /* Center children horizontally */
+  }
+  
+  .img1 {
+    width: 70px;
+    margin-bottom: 20px; /* Add margin to separate the logo and the heading */
+  }
+  
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    margin-top: 10px;
+    padding: 5px;
+  }
+  
+  label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  input {
+    width: 100%;
+    height: 40px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 15px;
+    color: gray;
+    border: 2px solid rgb(218, 214, 214);
+    border-radius: 15px;
+  }
+  
+  input:focus {
+    box-shadow: 0px -7px 3px -2px rgba(15, 91, 231, 0.4),
+      0px 7px 3px -2px rgba(15, 91, 231, 0.4),
+      7px 0px 3px -2px rgba(15, 91, 231, 0.4),
+      -7px 0px 3px -2px rgba(15, 91, 231, 0.4);
+    outline: none;
+  }
+  
+  button {
+    width: 100%;
+    height: 40px;
+    border: hidden;
+    border-radius: 20px;
+    font-size: 18px;
+    margin: 5px 0px;
+    background-color: #f30d19;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #df0812;
+  }
+  
+  p {
+    font-size: 15px;
+    margin: 10px 0px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #f30d19;
+    font-weight: 700;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  .error-message {
+    color: red;
+    margin-top: 10px; /* Add spacing above the error message */
+    transition: color 0.3s; /* Add transition effect for color change */
+  }
+  
+  /* Hover effect */
+  .error-message:hover {
+    color: darkred; /* Change the color on hover */
+    cursor: pointer; /* Change cursor on hover to indicate interactivity */
+  }

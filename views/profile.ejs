@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/profile.css">
+</head>
+<body>
+        <main class='maincard'>
+            <div class='card-container'>
+                <div class='bio'>
+                    <h2><%=user.fullname%></h2>
+                    <p><strong><%=user.username%></strong></p>
+                </div>
+                <a class="logout" href="/logout">Logout</a>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <input type="text" name="filecaption" placeholder="Somecaption"/>
+                    <input type="file" name="file" >
+                    <button type="submit">Upload</button>
+                </form>
+            </div>
+        </main>
+
+        <div class="container">
+            <div class="cards">
+                <% user.posts.forEach(function(post){%>
+                <div class="card" style="width: 18rem;">
+                    <img src="/images/uploads/<%= post.image %>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= post.imageText%></h5>
+                    </div>
+                </div>
+                <% })%>
+            </div>
+        </div>
+</body>
+</html>
+ 

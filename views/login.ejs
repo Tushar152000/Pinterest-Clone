@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest Clone - Login</title>
+    <link rel="stylesheet" href="stylesheets/login.css"> <!-- Link to your custom stylesheet here -->
+</head>
+
+<body>
+    <div class="container">
+        <img
+        src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png"
+        alt="pin logo"
+        class="img1"
+      />
+        <h1>Login to Pinterest</h1>
+        <% if (error && error.length) { %>
+            <p class="error-message"><%= error[0] %></p>
+        <% } %>
+    
+        <form action="/login" method="post">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="username" placeholder="Username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="password" name="password" required>
+
+            <button type="submit" value="login account" >Login</button>
+        </form>
+
+        <p>Don't have an account? <a href="/">Register here</a></p>
+    </div>
+</body>
+
+</html>
